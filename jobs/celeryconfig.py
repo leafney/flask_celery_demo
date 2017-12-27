@@ -4,7 +4,8 @@
 broker_url = 'redis://192.168.5.123:6379/1'
 result_backend = 'redis://192.168.5.123:6379/2'
 
-imports = ('jobs.tasks')
+# import
+imports = ('jobs.tasks', 'jobs.email')
 
 # # 任务序列化和反序列化使用msgpack方案
 # task_serializer = 'msgpack'
