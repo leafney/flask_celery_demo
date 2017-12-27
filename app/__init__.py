@@ -6,7 +6,7 @@ from config import config
 # celery
 from celery import Celery
 # email
-from flask_mail import Mail, Message
+from flask_mail import Mail
 
 
 celery = Celery(__name__)
@@ -22,6 +22,7 @@ def create_app(config_name):
     app.config.from_object(config[config_name])
     config[config_name].init_app(app)
 
+    # 载入第三方扩展
     mail.init_app(app)
 
     # 附加路由和自定义的错误页面
