@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-任务 发送邮件
+任务 添加需要导入current_app的任务
 """
 
 from app import celery
