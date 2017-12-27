@@ -25,7 +25,7 @@ class DevelopmentConfig(Config):
     MAIL_SERVER = 'smtp.163.com'
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    MAIL_DEFAULT_SENDER = 'flask@163.com'
+    MAIL_DEFAULT_SENDER = os.environ.get('MAIL_USERNAME')
     MAIL_PORT = 25
     MAIL_USE_TLS = False
 
