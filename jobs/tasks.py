@@ -11,3 +11,10 @@ from app import celery
 def add_together(a, b):
     print('job tasks.add_together')
     return a + b
+
+
+@celery.task(name='printy')
+def printy(a, b):
+    print('job printy')
+    print(a + b)
+    return a + b

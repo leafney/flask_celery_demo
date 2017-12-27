@@ -14,3 +14,15 @@ imports = ('jobs.tasks')
 # accept_content = ['json', 'msgpack']
 timezone = 'Asia/Shanghai'
 enable_utc = True
+
+
+# beat schedules
+from datetime import timedelta
+
+beat_schedule = {
+    'printy': {
+        'task': 'printy',
+        'schedule': timedelta(seconds=5),  # 每 5 秒执行一次
+        'args': (8, 2)
+    }
+}
